@@ -41,13 +41,9 @@ getFilteredData = function() {
         # note: had to change separator from " " to "," in order to read a string containing a space
         # as POSIXct
         write.table(dt[c(-1, -2)], file = outFile, row.names = FALSE, sep = ",")
-        # test read
-        #filt <- read.table(outFile,
-        #                   header = TRUE, stringsAsFactors = FALSE, sep = ",",
-        #                   colClasses = c(rep("numeric", 7), "POSIXct"))
     }
     # read filtered data and return a data table
     filt <- read.table(outFile,
                        header = TRUE, stringsAsFactors = FALSE, sep = ",",
-                    colClasses = c(rep("numeric", 7), "POSIXct"))
+                       colClasses = c(rep("numeric", 7), "POSIXct"))
 }
