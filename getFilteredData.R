@@ -1,7 +1,7 @@
 #getFilteredData.R
 getFilteredData = function() {
     # for local use
-    setwd("~/Devel/R/DataScience/EDA/Project1/ExData_Plotting1")
+    #setwd("~/Devel/R/DataScience/EDA/Project1/ExData_Plotting1")
     # libraries
     library("data.table")
     library("dplyr")
