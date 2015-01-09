@@ -50,7 +50,7 @@ points(filt$DateTime,
 legend("topright",
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),  # labels
        lty = c(1, 1, 1),                                                  # line type
-       lwd = c(2.0, 2.0, 2.0),                                            # line width
+       lwd = c(1.0, 1.0, 1.0),                                            # line width
        col = c("black", "red", "blue")                                    # line color
 )
 # 4: Global Rective Power usage versus time
@@ -105,7 +105,7 @@ with(filt,                            # add legend
      legend("topright",
             legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),  # labels
             lty = c(1, 1, 1),                                                  # line type
-            lwd = c(2.0, 2.0, 2.0),                                            # line width
+            lwd = c(1.0, 1.0, 1.0),                                            # line width
             col = c("black", "red", "blue")                                    # line color
      ))
 # 4th plot

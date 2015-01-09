@@ -35,8 +35,9 @@ points(filt$DateTime,
 legend("topright",
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),  # labels
        lty = c(1, 1, 1),                                                  # line type
-       lwd = c(2.0, 2.0, 2.0),                                            # line width
-       col = c("black", "red", "blue")                                    # line color
+       lwd = c(1.0, 1.0, 1.0),                                            # line width
+       col = c("black", "red", "blue"),                                   # line color
+       bty = "n"                                                          # box around legend off
 )
 # open png device and set width, height and units explicitly
 png(filename = "plot3.png", width = 480, height = 480, units = "px")
@@ -67,8 +68,9 @@ with(filt,
      legend("topright",
             legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),  # labels
             lty = c(1, 1, 1),                                                  # line type
-            lwd = c(2.0, 2.0, 2.0),                                            # line width
-            col = c("black", "red", "blue")                                    # line color
+            lwd = c(1.0, 1.0, 1.0),                                            # line width
+            col = c("black", "red", "blue"),                                   # line color
+            bty = "n"                                                          # box around legend off
      )
 )
 # close the png device
