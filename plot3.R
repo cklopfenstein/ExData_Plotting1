@@ -9,36 +9,7 @@ source("getFilteredData.R")
 
 # get the filtered data, and make the plot
 filt <- getFilteredData()
-# create plot on screen device
-# make 1st plot
-plot(filt$DateTime,
-     filt$Sub_metering_1, 
-     type = "l",
-     ylab = "Energy sub metering",
-     xlab = "",
-     col = "black")
-# add points from 2nd plot
-points(filt$DateTime,
-     filt$Sub_metering_2, 
-     type = "l",
-     ylab = "Energy sub metering",
-     xlab = "",
-     col = "red")
-# add points from 3rd plot
-points(filt$DateTime,
-     filt$Sub_metering_3, 
-     type = "l",
-     ylab = "Energy sub metering",
-     xlab = "",
-     col = "blue")
-# add legend
-legend("topright",
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),  # labels
-       lty = c(1, 1, 1),                                                  # line type
-       lwd = c(1.0, 1.0, 1.0),                                            # line width
-       col = c("black", "red", "blue"),                                   # line color
-       bty = "n"                                                          # box around legend off
-)
+
 # open png device and set width, height and units explicitly
 png(filename = "plot3.png", width = 480, height = 480, units = "px")
 # make the plot

@@ -10,10 +10,10 @@ source("getFilteredData.R")
 # get the filtered data, and make the plot
 filt <- getFilteredData()
 # create plot on screen device
-hist(filt$Global_active_power,
-     main = "Global Active Power",
-     xlab = "Global Active Power (kilowatts)", 
-     col = "red")
+#hist(filt$Global_active_power,
+#     main = "Global Active Power",
+#     xlab = "Global Active Power (kilowatts)", 
+#     col = "red")
 # open png device and set width, height and units explicitly
 png(filename = "plot1.png", width = 480, height = 480, units = "px")
 # make the plot

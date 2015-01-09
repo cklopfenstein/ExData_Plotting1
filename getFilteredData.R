@@ -1,4 +1,8 @@
-#getFilteredData.R
+# getFilteredData.R
+# Function to download a zip file, unzip it, then select a subset of data for
+# further processing, and write that data to a file.
+# (First checks for existence of processed data file).
+# Return value: data table containing the selected/pre-processed data.
 getFilteredData = function() {
     # for local use
     #setwd("~/Devel/R/DataScience/EDA/Project1/ExData_Plotting1")
@@ -39,9 +43,10 @@ getFilteredData = function() {
         # strip off original date and time columns, keep POSIXct DateTime as last column, write
         # selected date range to file.
         # note: had to change separator from " " to "," in order to read a string containing a space
-        # as POSIXct
+        # as POSIXct (see below)
         write.table(dt[c(-1, -2)], file = outFile, row.names = FALSE, sep = ",")
-    }
+    }# end - if (!filtExists)
+    
     # read filtered data and return a data table
     filt <- read.table(outFile,
                        header = TRUE, stringsAsFactors = FALSE, sep = ",",
