@@ -11,6 +11,7 @@ getFilteredData = function() {
     library("dplyr")
     library("lubridate")
     # constants
+    url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
     zipFile <- "./uci.zip"
     rawFile <- "./household_power_consumption.txt"
     outFile <- "./filteredData.csv"
@@ -26,8 +27,7 @@ getFilteredData = function() {
         if (!rawExists) {
             # assume that if the raw data file is not present, we haven't downloaded
             # the zip file either. So do the download and unzip here
-            download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", 
-                          destfile = zipFile, method = "wget")
+            download.file(url, destfile = zipFile, method = "wget")  # method = "wget" for Linux
             unzip(zipFile, exdir = "./")
         }
         # read in the data
