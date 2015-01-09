@@ -15,9 +15,10 @@ filt <- getFilteredData()
 #     filt$Global_active_power, 
 #     type = "l",
 #     ylab = "Global Active Power (kilowatts)",
-#     xlab = "")
+#     xlab = "",
+#     bg = "transparent")
 # open png device and set width, height and units explicitly
-png(filename = "plot2.png", width = 480, height = 480, units = "px")
+png(filename = "plot2.png", width = 480, height = 480, units = "px", bg = "transparent")
 # make the plot
 with(filt, 
      plot(DateTime,

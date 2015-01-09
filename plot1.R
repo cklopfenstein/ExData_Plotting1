@@ -13,9 +13,10 @@ filt <- getFilteredData()
 #hist(filt$Global_active_power,
 #     main = "Global Active Power",
 #     xlab = "Global Active Power (kilowatts)", 
-#     col = "red")
+#     col = "red",
+#     bg = "transparent")
 # open png device and set width, height and units explicitly
-png(filename = "plot1.png", width = 480, height = 480, units = "px")
+png(filename = "plot1.png", width = 480, height = 480, units = "px", bg = "transparent")
 # make the plot
 with(filt, 
      hist(Global_active_power,
